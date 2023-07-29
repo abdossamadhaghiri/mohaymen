@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Database {
 
     private static Database database;
-    private ArrayList<Document> documents;
+    private final ArrayList<Document> documents;
     private HashMap<String, ArrayList<String>> invertedIndex;
 
     private Database() {
