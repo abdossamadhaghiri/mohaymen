@@ -7,7 +7,7 @@ public class UserHandler {
     public void run() {
         System.out.println("inter your key:");
         Scanner scanner = new Scanner(System.in);
-        String key = scanner.nextLine();
+        String key = scanner.nextLine().toLowerCase().trim();
         ArrayList<String> answer = new Manager().search(key);
 
         if (answer == null) {

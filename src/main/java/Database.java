@@ -32,7 +32,10 @@ public class Database {
     private void updateDatabase() {
 
         //update documents
-        this.documents = new FileHandler().readAllFiles();
+        HashMap<String, String> nameAndTextOfDocuments = new FileHandler().readAllFiles("src/main/resources/documents");
+        for (String documentName : nameAndTextOfDocuments.keySet()) {
+            this.documents.add(new Document(documentName, nameAndTextOfDocuments.get(documentName)));
+        }
         //update inverted index
         this.invertedIndex = new InvertedIndex().createInvertedIndex(documents);
 

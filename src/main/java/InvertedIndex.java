@@ -13,9 +13,12 @@ public class InvertedIndex {
 
         Set<String> allTokens = new HashSet<>();
 
+        HashMap<Document, List<String>> tokens = new HashMap<>();
+
         //tokenize
         for (Document document : documents) {
-            List<String> documentTokens = Arrays.asList(document.getText().toLowerCase().split(" "));
+            List<String> documentTokens = tokenize(document.getText());
+            tokens.put(document, documentTokens);
             allTokens.addAll(documentTokens);
         }
 
@@ -23,7 +26,7 @@ public class InvertedIndex {
         for (String token : allTokens) {
             ArrayList<String> relatedDocuments = new ArrayList<>();
             for (Document document : documents) {
-                if (document.getText().contains(token)) {
+                if (tokens.get(document).contains(token)) {
                     relatedDocuments.add(document.getName());
                 }
             }
@@ -32,6 +35,9 @@ public class InvertedIndex {
 
         return invertedIndex;
 
+    }
 
+    public List<String> tokenize(String text) {
+        return Arrays.asList(text.toLowerCase().split(" "));
     }
 }
