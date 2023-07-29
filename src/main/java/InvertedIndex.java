@@ -3,7 +3,7 @@ import java.util.*;
 
 public class InvertedIndex {
 
-    private HashMap<String, ArrayList<String>> invertedIndex;
+    private final HashMap<String, ArrayList<String>> invertedIndex;
 
     public InvertedIndex() {
         invertedIndex = new HashMap<>();
