@@ -10,7 +10,7 @@ public class FileHandlerTest {
 
     @Test
     public void readAllFilesTest() {
-        String path = "src/test/resourcess";
+        String path = "src/test/resources";
 
         Map<String, String> expected = new HashMap<>();
 
