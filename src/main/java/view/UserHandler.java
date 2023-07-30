@@ -1,14 +1,16 @@
+package view;
 
-import java.util.ArrayList;
+import controller.Manager;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserHandler {
 
     public void run() {
-        System.out.println("inter your key:");
+        System.out.println("enter your key:");
         Scanner scanner = new Scanner(System.in);
         String key = scanner.nextLine().toLowerCase().trim();
-        ArrayList<String> answer = new Manager().search(key);
+        List<String> answer = new Manager().search(key);
 
         if (answer == null) {
             System.out.println("not found!");

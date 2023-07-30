@@ -266,8 +266,8 @@ by Joshua Bloch
 * If an exception does not have a chaining-aware constructor, use the `initCause` method of `Throwable`.
 * Try to avoid low-level exceptions by checking the higher-level method's parameters upfront.
 
-#### Item 62: Document all exceptions thrown by each method
-* Document the unchecked exceptions a method can throw, thereby documenting its preconditions.
+#### Item 62: model.Document all exceptions thrown by each method
+* model.Document the unchecked exceptions a method can throw, thereby documenting its preconditions.
 * Do not use the `throws` keyword to include unchecked exceptions in a method declaration.
 
 #### Item 63: Include failure-capture information in detail messages

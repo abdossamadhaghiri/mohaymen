@@ -1,10 +1,9 @@
+import model.Document;
+import model.InvertedIndex;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -15,25 +14,25 @@ public class InvertedIndexTest {
     @Test
     @Before
     public void testCreateInvertedIndex() {
-        ArrayList<Document> documents = new ArrayList<>();
+        List<Document> documents = new ArrayList<>();
         documents.add(new Document("doc1", "this is a Test"));
         documents.add(new Document("doc2", "Hello world it is second doc"));
         documents.add(new Document("doc3", "third doc for a test  "));
 
-        HashMap<String, ArrayList<String>> expected = new HashMap<>();
-        ArrayList<String> doc1 = new ArrayList<>();
+        Map<String, List<String>> expected = new HashMap<>();
+        List<String> doc1 = new ArrayList<>();
         doc1.add("doc1");
-        ArrayList<String> doc2 = new ArrayList<>();
+        List<String> doc2 = new ArrayList<>();
         doc2.add("doc2");
-        ArrayList<String> doc3 = new ArrayList<>();
+        List<String> doc3 = new ArrayList<>();
         doc3.add("doc3");
-        ArrayList<String> doc12 = new ArrayList<>();
+        List<String> doc12 = new ArrayList<>();
         doc12.add("doc1");
         doc12.add("doc2");
-        ArrayList<String> doc13 = new ArrayList<>();
+        List<String> doc13 = new ArrayList<>();
         doc13.add("doc1");
         doc13.add("doc3");
-        ArrayList<String> doc23 = new ArrayList<>();
+        List<String> doc23 = new ArrayList<>();
         doc23.add("doc2");
         doc23.add("doc3");
 
@@ -49,7 +48,7 @@ public class InvertedIndexTest {
         expected.put("third", doc3);
         expected.put("for", doc3);
 
-        HashMap<String, ArrayList<String>> actual = invertedIndex.createInvertedIndex(documents);
+        Map<String, List<String>> actual = invertedIndex.createInvertedIndex(documents);
 
         assertEquals(expected, actual);
 

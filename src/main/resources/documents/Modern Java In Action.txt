@@ -8787,7 +8787,7 @@ your maven configuration:
 <transformers>
 <transformer implementation="org. Apache. Maven. Plugins. Shade.
 Resource. Manifestresourcetransformer">
-<mainclass>org. Openjdk. Jmh. Main</mainclass>
+<mainclass>org. Openjdk. Jmh. view.Main</mainclass>
 </transformer>
 parallel streams 177
 
@@ -18391,7 +18391,7 @@ available, for example, the client gets an executionexception like the following
 exception in thread "main" java. Lang. Runtimeexception:
 java. Util. Concurrent. Executionexception: java. Lang. Runtimeexception:
 product not available
-at java89inaction. Chap16. Asyncshopclient. Main(asyncshopclient. Java:16)
+at java89inaction. Chap16. Asyncshopclient. view.Main(asyncshopclient. Java:16)
 caused by: java. Util. Concurrent. Executionexception: java. Lang. Runtimeexception:
 product not available
 at java. Base/java. Util. Concurrent. Completablefuture. Reportget
@@ -18400,7 +18400,7 @@ at java. Base/java. Util. Concurrent. Completablefuture. Get
 (completablefuture. Java:1999)
 implementing an asynchronous api 395
 
-at java89inaction. Chap16. Asyncshopclient. Main(asyncshopclient. Java:14)
+at java89inaction. Chap16. Asyncshopclient. view.Main(asyncshopclient. Java:14)
 caused by: java. Lang. Runtimeexception: product not available
 at java89inaction. Chap16. Asyncshop. Calculateprice(asyncshop. Java:38)
 at java89inaction. Chap16. Asyncshop. Lambda$0(asyncshop. Java:33)
@@ -19705,7 +19705,7 @@ stored indefinitely.
 figure 17.3 shows the typical life cycle of an application implementing the interfaces
 defined by the flow api.
 
-Main publisher subscriber subscription
+view.Main publisher subscriber subscription
 
 subscribe(subscriber)
 backpressure
@@ -20232,7 +20232,7 @@ new york : 18
 new york : 75
 java. Lang. Runtimeexception: error!
 At flow. Common. Tempinfo. Fetch(tempinfo. Java:18)
-at flow. Main. Lambda$main$0(main. Java:12)
+at flow. view.Main. Lambda$main$0(main. Java:12)
 at io. Reactivex. Internal. Observers. Lambdaobserver
 . Onnext(lambdaobserver. Java:59)
 at io. Reactivex. Internal. Operators. Observable

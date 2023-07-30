@@ -294,31 +294,31 @@ To lead, it's more important to be qualified and fearless, the positional author
 ### 16. Hiring a Juggler
 
 
-**Circus Manager:** How long have you been juggling? 
+**Circus controller.Manager:** How long have you been juggling?
 
 **Candidate:** Oh, about six years. 
 
-**Manager:** Can you handle three balls, four balls, and five balls? 
+**controller.Manager:** Can you handle three balls, four balls, and five balls?
 
 **Candidate:** Yes, yes, and yes. 
 
-**Manager:** Do you work with flaming objects? 
+**controller.Manager:** Do you work with flaming objects?
 
 **Candidate:** Sure. 
 
-**Manager:**...knives, axes, open cigar boxes, floppy hats? 
+**controller.Manager:**...knives, axes, open cigar boxes, floppy hats?
 
 **Candidate:** I can juggle anything. 
 
-**Manager:** Do you have a line of funny patter that goes with your juggling? 
+**controller.Manager:** Do you have a line of funny patter that goes with your juggling?
 
 **Candidate:** It’s hilarious. 
 
-**Manager:** Well, that sounds fine. I guess you’re hired. 
+**controller.Manager:** Well, that sounds fine. I guess you’re hired.
 
 **Candidate:** Umm... Don’t you want to see me juggle? 
 
-**Manager:** Gee, I never thought of that.
+**controller.Manager:** Gee, I never thought of that.
 
 
 > It would be ludicrous to think of hiring a juggler without first seeing him perform. That’s just common sense. Yet when you set out to hire an engineer or a designer or a programmer or a group manager, the rules of common sense are often suspended. You don’t ask to see a design or a program or anything. In fact, the interview is just talk.

@@ -119,7 +119,7 @@ by Brian Goetz
 
 ##### 4.5: Documenting synchronization policies
 
-* Document a class's thread safety guarantees for its clients; document its synchronization policy for its maintainers.
+* model.Document a class's thread safety guarantees for its clients; document its synchronization policy for its maintainers.
 * If you want clients to be able to create new atomic operations on your class, you must document which locks they should acquire to do so safely.
 * If you must guess whether a class is thread-safe, improve the quality of your guess by interpreting the specification by someone who must implement it versus someone who will merely use it.
 

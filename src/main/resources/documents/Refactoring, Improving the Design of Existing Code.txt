@@ -962,7 +962,7 @@ to
 			case SALESMAN:
 				return new Salesman();
 			case MANAGER:
-				return new Manager();
+				return new controller.Manager();
 			default:
 				throw new IllegalArgumentException("Incorrect type code value");
 		}
@@ -1023,7 +1023,7 @@ to
 					case SALESMAN:
 						return new Salesman();
 					case MANAGER:
-						return new Manager();
+						return new controller.Manager();
 					default:
 						throw new IllegalArgumentException("Incorrect Employee Code");
 				}
@@ -1687,8 +1687,8 @@ Motivation
 You have constructors on subclasses with mostly identical bodies.
 Create a superclass constructor; call this from the subclass methods
 
-	class Manager extends Employee...
-		public Manager (String name, String id, int grade) {
+	class controller.Manager extends Employee...
+		public controller.Manager (String name, String id, int grade) {
 		_name = name;
 		_id = id;
 		_grade = grade;
@@ -1696,7 +1696,7 @@ Create a superclass constructor; call this from the subclass methods
 
 to
 
-	public Manager (String name, String id, int grade) {
+	public controller.Manager (String name, String id, int grade) {
 		super (name, id);
 		_grade = grade;
 	}

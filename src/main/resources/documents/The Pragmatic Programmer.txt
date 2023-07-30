@@ -576,7 +576,7 @@ How to Program Deliberately
     Don't code blindfolded.
     Proceed from a plan.
     Rely only on reliable things.
-    Document your assumptions. Design by Contract.
+    model.Document your assumptions. Design by Contract.
     Don't just test your code, but test your assumptions as well. Don't guess Assertive Programming
     Prioritize your effort.
     Don't be a slave to history. Don't let existing code dictate future code. Refactoring
@@ -846,7 +846,7 @@ It is a mistake to think that the activities of a project—analysis, design, co
 
 Tip 60: Organize Around Functionality, Not Job Functions
 
-    Split teams by functionally. Database, UI, API
+    Split teams by functionally. model.Database, UI, API
     Let the teams organize themselves internally
     Each team has responsibilities to others in the project (defined by their agreed-upon commitments)
     We're looking for cohesive, largely self-contained teams of people
@@ -904,7 +904,7 @@ Tests that run with every build are the most effective.
 The earlier a bug is found, the cheaper it is to remedy. "Code a little, test a little".
 
 Tip 63: Coding Ain't Done til All the Tests Run
-3 Main aspects:
+3 view.Main aspects:
 1.-What to Test
 
     Unit testing: code that exercises a module.
@@ -1211,7 +1211,7 @@ How to Program Deliberately
     Don't code blindfolded.
     Proceed from a plan.
     Rely only on reliable things.
-    Document your assumptions.
+    model.Document your assumptions.
     Test assumptions as well as code.
     Prioritize your effort.
     Don't be a slave to history.

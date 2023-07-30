@@ -1,18 +1,21 @@
+package model;
+
 import java.io.File;
 import java.nio.file.Files;
 import java.util.HashMap;
+import java.util.Map;
 
 public class FileHandler {
 
-    public HashMap<String, String> readAllFiles(String path) {
-        HashMap<String, String> nameAndTextOfDocuments = new HashMap<>();
+    public Map<String, String> readAllFiles(String path) {
+        Map<String, String> nameAndTextOfDocuments = new HashMap<>();
 
         try {
             File directory = new File(path);
 
             for (File file : directory.listFiles()) {
                 String name = file.getName();
-                String text = Files.readString(file.toPath()).replaceAll("(\r\n)+", " ").replaceAll(" ( )+", " ").trim();
+                String text = Files.readString(file.toPath());
                 nameAndTextOfDocuments.put(name, text);
             }
         } catch (Exception e) {
