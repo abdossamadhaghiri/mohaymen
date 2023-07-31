@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class FileHandler {
 
@@ -14,7 +15,7 @@ public class FileHandler {
         try {
             File directory = new File(path);
 
-            for (File file : directory.listFiles()) {
+            for (File file : Objects.requireNonNull(directory.listFiles())) {
                 String name = file.getName();
                 String text = Files.readString(file.toPath());
                 nameAndTextOfDocuments.put(name, text);
