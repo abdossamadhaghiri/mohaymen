@@ -1,0 +1,6 @@
+hello this is a test. it's first file.
+we are going to search a key in this file and file2.
+
+goodbye everyone.
+
+abdossamad haghiri.
