@@ -12,7 +12,7 @@ public class UserHandler {
         String key = scanner.nextLine().toLowerCase().trim();
         List<String> answer = new Manager().search(key);
 
-        if (answer == null) {
+        if (answer.size() == 0) {
             System.out.println("not found!");
         } else {
             for (String documentName : answer) {

@@ -1,9 +1,7 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import javax.swing.plaf.ListUI;
+import java.util.*;
 
 public class Database {
 
@@ -18,7 +16,7 @@ public class Database {
     }
 
     public List<String> getRelatedDocuments(String key) {
-        return this.invertedIndex.get(key);
+        return this.invertedIndex.getOrDefault(key, new ArrayList<>());
     }
 
     public static Database getDatabase() {

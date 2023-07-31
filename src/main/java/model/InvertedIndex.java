@@ -18,26 +18,17 @@ public class InvertedIndex {
 
     public Map<String, List<String>> createInvertedIndex(List<Document> documents) {
 
-        Set<String> allTokens = new HashSet<>();
-
-        Map<Document, List<String>> tokens = new HashMap<>();
-
-        //tokenize
         for (Document document : documents) {
-            List<String> documentTokens = tokenize(document.text());
-            tokens.put(document, documentTokens);
-            allTokens.addAll(documentTokens);
-        }
-
-        //make hashmap
-        for (String token : allTokens) {
-            List<String> relatedDocuments = new ArrayList<>();
-            for (Document document : documents) {
-                if (tokens.get(document).contains(token)) {
-                    relatedDocuments.add(document.name());
+            Set<String> documentTokens = new HashSet<>(tokenize(document.text()));
+            for (String token : documentTokens) {
+                if (invertedIndex.containsKey(token)) {
+                    invertedIndex.get(token).add(document.name());
+                } else {
+                    List<String> relatedDocument = new ArrayList<>();
+                    relatedDocument.add(document.name());
+                    invertedIndex.put(token, relatedDocument);
                 }
             }
-            invertedIndex.put(token, relatedDocuments);
         }
 
         return invertedIndex;
@@ -46,5 +37,6 @@ public class InvertedIndex {
 
     public List<String> tokenize(String text) {
         return Arrays.asList(text.toLowerCase().trim().split("\\s+"));
+
     }
 }

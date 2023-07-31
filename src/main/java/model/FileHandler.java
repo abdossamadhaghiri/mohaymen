@@ -1,6 +1,7 @@
 package model;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class FileHandler {
                 String text = Files.readString(file.toPath());
                 nameAndTextOfDocuments.put(name, text);
             }
-        } catch (Exception e) {
+        } catch (IOException | NullPointerException e) {
             e.printStackTrace();
         }
         return nameAndTextOfDocuments;
