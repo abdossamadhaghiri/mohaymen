@@ -1,9 +1,9 @@
 import model.Database;
-import org.junit.Test;
-
-import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 import java.util.List;
-import static junit.framework.TestCase.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class DatabaseTest {
 
@@ -13,8 +13,7 @@ public class DatabaseTest {
         String key = "abdossamad";
         List<String> actual = database.getRelatedDocuments(key);
 
-        List<String> expected = new ArrayList<>();
-        expected.add("doc2.txt");
+        List<String> expected = List.of("doc2.txt");
 
         assertEquals(expected, actual);
     }

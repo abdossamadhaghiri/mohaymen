@@ -1,34 +1,29 @@
 import model.FileHandler;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
-import static junit.framework.TestCase.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FileHandlerTest {
 
     @Test
-    public void readAllFilesTest() {
+    public void readAllFilesTest() throws IOException {
         String path = "src/test/resources";
 
         Map<String, String> expected = new HashMap<>();
 
-        String text1 = "    the    file is       second one.\r\n" +
-                "\r\n" +
-                "salam. khoobi? che khabara?\r\n" +
-                "   boro baba.\r\n" +
-                "\r\n" +
-                "ya ali!    ";
-        String text2 = "hellow this is a test. it's first file.\r\n" +
-                "we are going to search a key in this file and file2.\r\n" +
-                "\r\n" +
-                "goodbye everyone.\r\n" +
-                "\r\n" +
-                "abdossamad haghiri.";
-
-        expected.put("doc1.txt", text1);
-        expected.put("doc2.txt", text2);
+        File directory = new File(path);
+        for (File file : Objects.requireNonNull(directory.listFiles())) {
+            String name = file.getName();
+            String text = Files.readString(file.toPath());
+            expected.put(name, text);
+        }
 
         Map<String, String> actual = new FileHandler().readAllFiles(path);
 
